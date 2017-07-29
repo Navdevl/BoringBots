@@ -1,0 +1,15 @@
+---
+# The list of urls needed for API calls.
+urls:
+  price_api: https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD
+  post_api:
+    slack: https://hooks.slack.com/services/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
+
+configuration:
+  type: price_change
+  verbose: true
+  parameters:
+    price_change: 5
+    check_every_x_mins: 10
+
+...

@@ -1,0 +1,25 @@
+---
+
+"""
+Create config.yml and use one of the configuration type
+"""
+
+# The list of urls needed for API calls.
+urls:
+  price_api: https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD Or use something else too
+  post_api:
+    slack: YOUR SLACK API URL
+
+configuration:
+  type: price_change
+  verbose: true
+  parameters:
+    price_change: 5 # in units
+    check_every_x_mins: 10 # in minutes
+
+configuration:
+  type: schedule
+  verbose: true
+  parameters:
+    frequency: 24 # in hours
+...
