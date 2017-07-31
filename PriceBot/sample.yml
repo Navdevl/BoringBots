@@ -8,7 +8,7 @@ Create config.yml and use one of the configuration type
 urls:
   price_api: https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD Or use something else too
   post_api:
-    slack: YOUR SLACK API URL
+    slack: YOUR SLACK WEBHOOK
 
 configuration:
   type: price_change

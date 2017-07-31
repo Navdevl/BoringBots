@@ -15,9 +15,9 @@ class Processor:
                 logging.info('Getting Price')
                 response = requests.get(self.urls['price_api'])
                 content = response.content
-                content = json.loads(content.decode())
+                price_dict = json.loads(content.decode())
 
-                price = content['USD']
+                price = price_dict['USD']
                 return price
             except:
                 time.sleep(3000)

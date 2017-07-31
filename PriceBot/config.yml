@@ -3,7 +3,7 @@
 urls:
   price_api: https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD
   post_api:
-    slack: https://hooks.slack.com/services/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
+    slack: YOUR_SLACK_WEBHOOK
 
 configuration:
   type: price_change
