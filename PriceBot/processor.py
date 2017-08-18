@@ -16,14 +16,12 @@ class Processor:
                 response = requests.get(self.urls['price_api'])
                 content = response.content
                 price_dict = json.loads(content.decode())
-
-                price = price_dict['USD']
-                return price
+                return price_dict
             except:
                 time.sleep(3000)
 
-    def send_response(self, price):
-        statement = "The current price of ETH is {0}. Bot by NavDevl".format(price)
+    def send_response(self, currency, price):
+        statement = "The current price of {0}: USD is {1}, INR is {2}. Bot by NavDevl".format(currency, price['USD'], price['INR'])
         payload = {"text": statement}
         payload = json.dumps(payload)
         print payload
@@ -35,8 +33,9 @@ class Processor:
 
     def schedule(self):
         while(True):
-            price = self.get_price()
-            self.send_response(price)
+            price_dict = self.get_price()
+            for currency, price in price_dict.iteritems():
+                self.send_response(currency, price)
             time_to_sleep = self.parameters['frequency'] * 60 * 60
             logging.info('Hibernating for {0} hours'.format(self.parameters['frequency']))
             time.sleep(time_to_sleep)

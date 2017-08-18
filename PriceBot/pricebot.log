@@ -1,0 +1,15 @@
+2017-08-18 16:54:15,714 - root - INFO - Program Started
+2017-08-18 16:54:15,717 - root - INFO - schedule function is called
+2017-08-18 16:54:15,717 - root - INFO - Getting Price
+2017-08-18 16:54:15,765 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): min-api.cryptocompare.com
+2017-08-18 16:54:16,428 - urllib3.connectionpool - DEBUG - https://min-api.cryptocompare.com:443 "GET /data/pricemulti?fsyms=ETH,XRP,BTC&tsyms=USD,INR HTTP/1.1" 200 None
+2017-08-18 16:54:16,443 - root - INFO - Sending response to slack
+2017-08-18 16:54:16,558 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): hooks.slack.com
+2017-08-18 16:54:17,569 - urllib3.connectionpool - DEBUG - https://hooks.slack.com:443 "POST /services/T0299MVR0/B690F6DU3/PbCgPY8an64g4CXiWue4so25 HTTP/1.1" 200 22
+2017-08-18 16:54:17,572 - root - INFO - Sending response to slack
+2017-08-18 16:54:17,575 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): hooks.slack.com
+2017-08-18 16:54:17,934 - urllib3.connectionpool - DEBUG - https://hooks.slack.com:443 "POST /services/T0299MVR0/B690F6DU3/PbCgPY8an64g4CXiWue4so25 HTTP/1.1" 200 22
+2017-08-18 16:54:17,938 - root - INFO - Sending response to slack
+2017-08-18 16:54:17,940 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): hooks.slack.com
+2017-08-18 16:54:18,382 - urllib3.connectionpool - DEBUG - https://hooks.slack.com:443 "POST /services/T0299MVR0/B690F6DU3/PbCgPY8an64g4CXiWue4so25 HTTP/1.1" 200 22
+2017-08-18 16:54:18,388 - root - INFO - Hibernating for 24 hours
